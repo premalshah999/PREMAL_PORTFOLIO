@@ -1,1 +1,2 @@
 2024-11-29T17:30:00: Improve loading times
+2024-03-01T16:55:00: Add support for new feature
