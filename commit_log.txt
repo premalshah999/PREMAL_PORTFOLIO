@@ -77,3 +77,4 @@
 2024-02-24T10:34:00: Add missing import statement
 2024-11-24T15:40:00: Improve mobile responsiveness
 2024-11-28T09:15:00: Fix issue with dark mode
+2024-02-29T19:58:00: Fix off-by-one error
