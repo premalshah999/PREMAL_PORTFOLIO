@@ -12,3 +12,4 @@
 2024-08-05T00:07:00: Update documentation with examples
 2024-07-21T05:05:00: Fix issue with dark mode
 2024-03-12T04:56:00: Update dependencies
+2024-03-31T17:23:00: Refactor function for reusability
