@@ -67,3 +67,4 @@
 2024-10-22T02:52:00: Fix typo in comments
 2024-05-14T14:44:00: Fix minor bug in script
 2024-07-11T22:10:00: Update README with more details
+2024-05-22T03:04:00: Improve UI for better user experience
