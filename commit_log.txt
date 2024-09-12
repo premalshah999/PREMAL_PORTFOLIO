@@ -28,3 +28,4 @@
 2024-05-27T03:44:00: Fix issue with dark mode
 2024-04-15T16:03:00: Add error handling to main function
 2024-10-17T21:51:00: Update documentation with examples
+2024-09-12T17:01:00: Add error handling to main function
