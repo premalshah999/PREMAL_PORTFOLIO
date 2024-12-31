@@ -147,3 +147,4 @@
 2024-12-04T13:13:00: Fix typo in comments
 2024-11-30T13:54:00: Update documentation with examples
 2024-06-02T13:08:00: Update README with more details
+2024-12-30T23:47:00: Update README with more details
