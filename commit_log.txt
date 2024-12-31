@@ -160,3 +160,4 @@
 2024-05-10T09:50:00: Add missing import statement
 2024-08-30T22:58:00: Remove redundant code
 2024-05-17T13:03:00: Implement logging for debugging
+2024-12-31T02:52:00: Add error handling to main function
