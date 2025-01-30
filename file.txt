@@ -1096,3 +1096,4 @@ Adding commit 100-number
 Adding commit 100-of
 Adding commit 100-commits
 Adding commit 100-in
+Adding commit 100-that
