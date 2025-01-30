@@ -84,3 +84,4 @@ Adding commit 8-number
 Adding commit 8-of
 Adding commit 8-commits
 Adding commit 8-in
+Adding commit 8-that
