@@ -27,3 +27,4 @@ Adding commit 3-for
 Adding commit 3-the
 Adding commit 3-number
 Adding commit 3-of
+Adding commit 3-commits
