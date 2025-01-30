@@ -17,3 +17,4 @@ Adding commit 2-the
 Adding commit 2-number
 Adding commit 2-of
 Adding commit 2-commits
+Adding commit 2-in
