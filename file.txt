@@ -81,3 +81,4 @@ Adding commit 8-Loop
 Adding commit 8-for
 Adding commit 8-the
 Adding commit 8-number
+Adding commit 8-of
