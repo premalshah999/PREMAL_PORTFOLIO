@@ -62,3 +62,4 @@ Adding commit 6-number
 Adding commit 6-of
 Adding commit 6-commits
 Adding commit 6-in
+Adding commit 6-that
