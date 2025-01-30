@@ -4041,3 +4041,5 @@ Adding commit for-Loop
 Adding commit for-for
 Adding commit for-the
 Adding commit for-number
+Adding commit for-of
+Adding commit for-commits
