@@ -29,3 +29,4 @@ Adding commit 3-number
 Adding commit 3-of
 Adding commit 3-commits
 Adding commit 3-in
+Adding commit 3-that
