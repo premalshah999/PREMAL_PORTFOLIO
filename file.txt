@@ -15,3 +15,4 @@ Adding commit 2-Loop
 Adding commit 2-for
 Adding commit 2-the
 Adding commit 2-number
+Adding commit 2-of
