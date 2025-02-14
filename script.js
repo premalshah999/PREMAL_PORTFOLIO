@@ -8,7 +8,7 @@ function typeWriter() {
     
     if (charIndex < textToType.length) {
         charIndex++;
-        setTimeout(typeWriter, 100);
+        setTimeout(typeWriter, 30);
     }
 }
 
@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nameIndex < nameToType.length) {
             typingText.textContent = nameToType.slice(0, nameIndex + 1);
             nameIndex++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 30);
         } else if (subtitleIndex < subtitleToType.length) {
             subtitleText.textContent = subtitleToType.slice(0, subtitleIndex + 1);
             subtitleIndex++;
-            setTimeout(typeWriter, 50);
+            setTimeout(typeWriter, 30);
         }
     }
 
@@ -171,6 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTitle.textContent = projectTitle;
             modalDescription.textContent = projectDescription;
             modal.style.display = "block";
+
+            // Show pop-up message
+            alert("View it on my GitHub");
         });
     });
 
@@ -199,5 +202,19 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeMenu() {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
+    }
+
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const message = event.target.message.value;
+
+        const subject = encodeURIComponent(`Message from ${name}`);
+        const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+        const mailtoLink = `mailto:premalshah204@gmail.com?subject=${subject}&body=${body}`;
+
+        window.location.href = mailtoLink; // Open the user's email client
     }
 });
