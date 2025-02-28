@@ -322,12 +322,13 @@ header {
 
 .header {
     position: fixed;
-    top: -30px;
+    top: -10px;
     left: 0;
     right: 0;
     z-index: 1000;
     background-color: rgba(var(--background-color-rgb), 0.8);
-    backdrop-filter: none;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); /* For Safari support */
     transition: all 0.3s ease;
 }
 
@@ -562,7 +563,7 @@ h2 {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 #typing-text {
-    font-size: 3.5rem;
+    font-size: 6rem;
     font-weight: bold;
     margin-bottom: 1rem;
     min-height: 4.5rem;
@@ -669,7 +670,8 @@ header {
     right: 0;
     z-index: 1000;
     background-color: rgba(var(--background-color-rgb), 0.8);
-    backdrop-filter: none;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); /* For Safari support */
     transition: all 0.3s ease;
 }
 
@@ -904,7 +906,7 @@ h2 {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 #typing-text {
-    font-size: 3.5rem;
+    font-size: 6rem;
     font-weight: bold;
     margin-bottom: 1rem;
     min-height: 4.5rem;
@@ -1007,7 +1009,7 @@ footer {
 
 @media (max-width: 768px) {
     #typing-text {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     .project-grid, .skills-grid, .experience-grid, .research-grid, .education-grid {
@@ -1589,26 +1591,8 @@ button:hover ~ #custom-cursor,
 }
 
 /* Add this CSS for the hero image */
-.hero-image {
-    position: absolute; /* Position it absolutely within the section */
-    right: -300px; /* Align to the right */
-    bottom: -320px; /* Align to the bottom */
-    width: 1100px; /* Set the desired width */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 0; /* Ensure it is behind other content */
-}
 
-/* Add this CSS for the vertical navigation bar */
-.vertical-nav {
-    position: absolute; /* Position it absolutely within the section */
-    left: 50px; /* Align to the left */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for centering */
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Space between buttons */
-    z-index: 1; /* Ensure it is above the image */
-}
+
 
 .nav-link {
     display: flex;
@@ -1627,32 +1611,7 @@ button:hover ~ #custom-cursor,
     margin-right: 10px; /* Space between icon and text */
 }
 
-/* LinkedIn button styles */
-.linkedin {
-    background-color: #039ef1; /* LinkedIn color */
-}
 
-.linkedin:hover {
-    background-color: #005582; /* Darker LinkedIn color on hover */
-}
-
-/* Email button styles */
-.email {
-    background-color: #D14836; /* Email color */
-}
-
-.email:hover {
-    background-color: #A03A2D; /* Darker Email color on hover */
-}
-
-/* GitHub button styles */
-.github {
-    background-color: #333; /* GitHub color */
-}
-
-.github:hover {
-    background-color: #1A1A1A; /* Darker GitHub color on hover */
-}
 
 /* Update existing styles for research and skills sections */
 .research-card {
@@ -1684,4 +1643,139 @@ body.light-theme .about-container,
 body.light-theme .contact-container {
     background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency as needed */
     border: none; /* Remove borders */
+}
+
+
+
+
+
+/* Default (dark) theme */
+.nav-link {
+    margin: 0 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Light theme specific styles */
+body.light-theme .nav-link {
+    color: #00BFFF; /* Sky blue color */
+}
+
+body.light-theme .nav-link:hover {
+    color: var(--accent-color); /* Keep the hover effect */
+}
+
+/* Also update the logo color for light theme */
+body.light-theme .logo {
+    color: #00BFFF; /* Sky blue color */
+}
+
+
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    #subtitle-text {
+        display: none;
+    }
+
+    .nav-container {
+        padding:1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--background-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .theme-switch-wrapper {
+        position: absolute;
+        top: 1rem;
+        right: 4rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+    }
+}
+
+ /* Hamburger menu animation */
+ .hamburger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
