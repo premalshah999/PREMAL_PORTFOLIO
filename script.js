@@ -1,6 +1,39 @@
+// ... existing code ...
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector(".nav-list");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function toggleMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        });
+    });
+
+    // ... rest of your existing code ...
+});
+// ... rest of your existing code ...
+
+
+
+
+
+
+
 // Typing effect
 const typingText = document.getElementById('typing-text');
-const textToType = "Hi! I'm Premal Shah";
+const textToType = "Better Call Shah!";
 let charIndex = 0;
 
 function typeWriter() {
@@ -83,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typingText = document.getElementById('typing-text');
     const subtitleText = document.getElementById('subtitle-text');
-    const nameToType = "Hi! I'm Premal Shah";
+    const nameToType = "Better Call Shah!";
     const subtitleToType = "Data Science | Software Development | Machine Learning | Cloud Computing";
     let nameIndex = 0;
     let subtitleIndex = 0;
@@ -116,11 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateSkills();
+                setTimeout(animateSkills, 300);
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, {
+         threshold: 0.2 
+        });
 
     if (skillsSection) {
         observer.observe(skillsSection);
@@ -218,3 +253,5 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = mailtoLink; // Open the user's email client
     }
 });
+
+
